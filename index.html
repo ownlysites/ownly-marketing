@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ownly Marketing — Fill Your Pipeline With Ready-to-Buy Clients</title>
+<meta name="description" content="Performance-driven marketing for business owners across the U.S. We fill your pipeline with quote-ready clients every single month. Free 5-minute audit, no card required.">
+<style>
+:root{
+  --navy-d:#050b15;
+  --navy:#0a1628;
+  --navy-l:#0f2138;
+  --gold:#d4a64a;
+  --gold-l:#f0c97a;
+  --gold-d:#a8801c;
+  --orange:#e8884c;
+  --cream:#f5f1e8;
+  --white:#ffffff;
+  --text-m:rgba(245,241,232,.72);
+  --text-d:rgba(245,241,232,.5);
+  --border:rgba(212,166,74,.22);
+  --r:14px;
+  --rs:8px;
+  --rl:20px;
+  --ff:'Bebas Neue','Oswald',Impact,sans-serif;
+  --fb:'Inter',-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--fb);
+  background:var(--navy-d);
+  color:var(--cream);
+  line-height:1.5;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(ellipse 1200px 800px at 50% -20%,rgba(212,166,74,.08),transparent 60%),
+    repeating-linear-gradient(0deg,transparent 0,transparent 79px,rgba(212,166,74,.05) 79px,rgba(212,166,74,.05) 80px),
+    repeating-linear-gradient(90deg,transparent 0,transparent 79px,rgba(212,166,74,.05) 79px,rgba(212,166,74,.05) 80px);
+  pointer-events:none;
+  z-index:0;
+}
+main,nav,section,footer{position:relative;z-index:1;}
+
+/* ---------- NAV ---------- */
+nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(5,11,21,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  max-width:1280px;
+  margin:0 auto;
+  padding:18px 32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-family:var(--ff);
+  font-size:24px;
+  letter-spacing:.18em;
+  color:var(--cream);
+  text-decoration:none;
+}
+.logo b{color:var(--gold);}
+.nav-links{
+  display:flex;
+  gap:36px;
+  align-items:center;
+}
+.nav-links a{
+  color:var(--text-m);
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:500;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{
+  background:var(--gold);
+  color:var(--navy-d) !important;
+  padding:10px 20px;
+  border-radius:var(--rs);
+  font-weight:700 !important;
+  letter-spacing:.08em !important;
+  font-size:12px !important;
+  transition:transform .2s,box-shadow .2s;
+}
+.nav-cta:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 24px rgba(212,166,74,.35);
+}
+@media(max-width:760px){
+  .nav-links a:not(.nav-cta){display:none;}
+  .nav-inner{padding:14px 18px;}
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  padding:80px 32px 100px;
+  text-align:center;
+  max-width:1280px;
+  margin:0 auto;
+}
+.tag{
+  display:inline-block;
+  padding:8px 22px;
+  border:1px solid var(--gold);
+  border-radius:999px;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold-l);
+  margin-bottom:36px;
+  font-weight:600;
+}
+h1{
+  font-family:var(--ff);
+  font-size:clamp(56px,9vw,140px);
+  line-height:.92;
+  letter-spacing:-.01em;
+  color:var(--white);
+  margin-bottom:36px;
+}
+h1 .gold{color:var(--gold);display:block;}
+h1 .orange{color:var(--orange);display:block;}
+.hero-sub{
+  max-width:680px;
+  margin:0 auto 44px;
+  font-size:18px;
+  color:var(--text-m);
+  line-height:1.65;
+}
+.cta-row{
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:80px;
+}
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--gold);
+  color:var(--navy-d);
+  padding:18px 32px;
+  border-radius:var(--rs);
+  text-decoration:none;
+  font-weight:700;
+  font-size:15px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  transition:all .25s;
+  box-shadow:0 12px 32px rgba(212,166,74,.25);
+}
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 40px rgba(212,166,74,.45);
+}
+.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:transparent;
+  color:var(--cream);
+  padding:18px 32px;
+  border:1px solid var(--border);
+  border-radius:var(--rs);
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  transition:all .2s;
+}
+.btn-secondary:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  max-width:920px;
+  margin:0 auto;
+}
+.stat{
+  padding:28px 16px;
+  background:rgba(212,166,74,.04);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+}
+.stat-num{
+  font-family:var(--ff);
+  font-size:44px;
+  color:var(--gold);
+  line-height:1;
+  margin-bottom:8px;
+}
+.stat-label{
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--text-m);
+}
+@media(max-width:760px){
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .hero{padding:50px 18px 70px;}
+}
+
+/* ---------- TICKER ---------- */
+.ticker{
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:22px 0;
+  overflow:hidden;
+  background:rgba(212,166,74,.03);
+}
+.ticker-track{
+  display:flex;
+  gap:48px;
+  white-space:nowrap;
+  animation:scroll 60s linear infinite;
+  font-family:var(--ff);
+  font-size:18px;
+  color:var(--text-m);
+  letter-spacing:.15em;
+}
+.ticker-track span{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+}
+.ticker-track span::before{
+  content:'▸';
+  color:var(--gold);
+}
+@keyframes scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* ---------- SECTIONS ---------- */
+section.block{
+  padding:100px 32px;
+  max-width:1280px;
+  margin:0 auto;
+}
+.eyebrow{
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:700;
+  margin-bottom:18px;
+}
+h2{
+  font-family:var(--ff);
+  font-size:clamp(40px,6vw,72px);
+  line-height:.95;
+  color:var(--white);
+  margin-bottom:24px;
+  letter-spacing:-.01em;
+}
+h2 .gold{color:var(--gold);}
+.section-sub{
+  max-width:640px;
+  font-size:17px;
+  color:var(--text-m);
+  margin-bottom:60px;
+  line-height:1.7;
+}
+.center{text-align:center;}
+.center .section-sub{margin-left:auto;margin-right:auto;}
+
+/* ---------- ABOUT ---------- */
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+@media(max-width:860px){
+  .two-col{grid-template-columns:1fr;gap:40px;}
+  section.block{padding:60px 18px;}
+}
+.about-features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-top:32px;
+}
+.feature{
+  padding:24px;
+  background:rgba(212,166,74,.05);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+}
+.feature-icon{font-size:24px;margin-bottom:14px;}
+.feature h4{
+  font-family:var(--ff);
+  font-size:20px;
+  letter-spacing:.06em;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+.feature p{font-size:13.5px;color:var(--text-m);line-height:1.6;}
+.checks{list-style:none;margin-top:24px;}
+.checks li{
+  padding-left:30px;
+  position:relative;
+  margin-bottom:14px;
+  color:var(--cream);
+  font-size:15px;
+}
+.checks li::before{
+  content:'✓';
+  position:absolute;
+  left:0;
+  top:0;
+  width:22px;
+  height:22px;
+  background:var(--gold);
+  color:var(--navy-d);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:13px;
+}
+
+/* ---------- PROCESS ---------- */
+.process{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:60px;
+}
+@media(max-width:860px){.process{grid-template-columns:1fr;}}
+.step{
+  background:linear-gradient(180deg,var(--navy-l),var(--navy));
+  border:1px solid var(--border);
+  border-radius:var(--rl);
+  padding:36px 30px;
+  position:relative;
+  overflow:hidden;
+}
+.step-num{
+  font-family:var(--ff);
+  font-size:88px;
+  line-height:1;
+  color:rgba(212,166,74,.18);
+  position:absolute;
+  top:18px;
+  right:24px;
+}
+.step-icon{font-size:30px;margin-bottom:18px;}
+.step-tag{
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:700;
+  margin-bottom:8px;
+}
+.step h3{
+  font-family:var(--ff);
+  font-size:30px;
+  color:var(--white);
+  margin-bottom:14px;
+  letter-spacing:.02em;
+}
+.step p{color:var(--text-m);font-size:14.5px;line-height:1.65;}
+
+/* ---------- NICHES ---------- */
+.niche-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:60px;
+}
+@media(max-width:1100px){.niche-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:760px){.niche-grid{grid-template-columns:repeat(2,1fr);}}
+.niche{
+  padding:26px 22px;
+  background:rgba(212,166,74,.04);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  transition:all .25s;
+}
+.niche:hover{
+  border-color:var(--gold);
+  background:rgba(212,166,74,.08);
+  transform:translateY(-3px);
+}
+.niche-icon{font-size:28px;margin-bottom:12px;}
+.niche h4{
+  font-family:var(--ff);
+  font-size:20px;
+  color:var(--white);
+  margin-bottom:6px;
+  letter-spacing:.04em;
+}
+.niche p{font-size:12px;color:var(--text-m);line-height:1.5;}
+
+/* ---------- BIG CTA ---------- */
+.big-cta{
+  background:linear-gradient(135deg,#1a0f00,#0a1628);
+  border:1px solid var(--gold);
+  border-radius:24px;
+  padding:80px 60px;
+  text-align:center;
+  max-width:1080px;
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+}
+.big-cta::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at top,rgba(212,166,74,.15),transparent 70%);
+  pointer-events:none;
+}
+.big-cta-content{position:relative;z-index:1;}
+.big-cta h2{
+  font-size:clamp(44px,7vw,84px);
+}
+.big-cta .section-sub{
+  margin:0 auto 40px;
+}
+.guarantee{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 24px;
+  background:rgba(212,166,74,.1);
+  border:1px solid var(--gold);
+  border-radius:999px;
+  font-size:13px;
+  color:var(--gold-l);
+  font-weight:600;
+}
+@media(max-width:760px){.big-cta{padding:50px 24px;}}
+
+/* ---------- WHY US ---------- */
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:60px;
+}
+@media(max-width:860px){.why-grid{grid-template-columns:1fr;}}
+.why{
+  padding:36px 30px;
+  background:rgba(212,166,74,.04);
+  border:1px solid var(--border);
+  border-radius:var(--rl);
+}
+.why-icon{font-size:34px;margin-bottom:16px;}
+.why h4{
+  font-family:var(--ff);
+  font-size:24px;
+  color:var(--gold);
+  margin-bottom:14px;
+  letter-spacing:.04em;
+}
+.why p{color:var(--text-m);font-size:14.5px;line-height:1.7;}
+
+/* ---------- TESTIMONIALS ---------- */
+.test-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:60px;
+}
+@media(max-width:860px){.test-grid{grid-template-columns:1fr;}}
+.test{
+  padding:32px 28px;
+  background:rgba(212,166,74,.04);
+  border:1px solid var(--border);
+  border-radius:var(--rl);
+}
+.test-stars{color:var(--gold);font-size:16px;margin-bottom:18px;letter-spacing:2px;}
+.test-quote{font-size:15px;line-height:1.7;color:var(--cream);margin-bottom:24px;font-style:italic;}
+.test-author{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.test-avatar{
+  width:42px;height:42px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold-d));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--navy-d);
+  font-weight:700;
+  font-size:14px;
+}
+.test-name{font-weight:600;color:var(--white);font-size:14px;}
+.test-co{color:var(--text-m);font-size:12px;}
+
+/* ---------- FOOTER ---------- */
+footer{
+  border-top:1px solid var(--border);
+  padding:60px 32px 40px;
+  background:rgba(5,11,21,.6);
+  text-align:center;
+  margin-top:80px;
+}
+footer .logo{font-size:32px;margin-bottom:8px;display:inline-block;}
+.foot-tag{
+  color:var(--text-m);
+  font-size:14px;
+  margin-bottom:30px;
+  letter-spacing:.04em;
+}
+.foot-links{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  margin-bottom:30px;
+  flex-wrap:wrap;
+}
+.foot-links a{
+  color:var(--text-m);
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  transition:color .2s;
+}
+.foot-links a:hover{color:var(--gold);}
+.foot-bottom{
+  font-size:12px;
+  color:var(--text-d);
+  border-top:1px solid var(--border);
+  padding-top:24px;
+  margin-top:24px;
+}
+.foot-contact{
+  margin-bottom:14px;
+  color:var(--text-m);
+  font-size:13.5px;
+}
+.foot-contact a{color:var(--gold);text-decoration:none;}
+.foot-contact a:hover{text-decoration:underline;}
+
+/* ---------- REVEAL ---------- */
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="logo">OWNLY <b>MARKETING</b></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#niches">Niches</a>
+      <a href="#results">Results</a>
+      <a href="https://app.mplannerpro.com/abce1ffefc/chat?pg=69539a14a3" class="nav-cta">Get Free Audit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="top">
+  <span class="tag">★ U.S. Coverage · All Niches · Performance-Driven</span>
+  <h1>
+    We Fill Your Pipeline With
+    <span class="gold">Quote-Ready Clients.</span>
+    <span class="orange">Every Single Month.</span>
+  </h1>
+  <p class="hero-sub">Ownly Marketing is a performance-driven growth engine helping business owners across the U.S. dominate their local market with precision advertising and AI-powered lead capture — so you focus on the work, we handle the pipeline.</p>
+  <div class="cta-row">
+    <a href="https://app.mplannerpro.com/abce1ffefc/chat?pg=69539a14a3" class="btn-primary">⚡ Get My Free Audit →</a>
+    <a href="#process" class="btn-secondary">See How It Works</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">5-Min</div><div class="stat-label">Free Audit</div></div>
+    <div class="stat"><div class="stat-num">12-Mo</div><div class="stat-label">Custom Plan</div></div>
+    <div class="stat"><div class="stat-num">$0</div><div class="stat-label">To Get Started</div></div>
+    <div class="stat"><div class="stat-num">30D</div><div class="stat-label">Results Window</div></div>
+  </div>
+</section>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>Home Improvement</span><span>HVAC &amp; Plumbing</span><span>Roofing &amp; Siding</span><span>Real Estate</span><span>Med Spas &amp; Aesthetics</span><span>Dental &amp; Orthodontics</span><span>Legal Services</span><span>Coaching &amp; Consulting</span><span>Auto Dealerships</span><span>Gyms &amp; Fitness</span><span>Restaurants &amp; F&amp;B</span><span>Solar &amp; Energy</span><span>Insurance</span><span>E-Commerce</span><span>Financial Services</span><span>Landscaping</span>
+    <span>Home Improvement</span><span>HVAC &amp; Plumbing</span><span>Roofing &amp; Siding</span><span>Real Estate</span><span>Med Spas &amp; Aesthetics</span><span>Dental &amp; Orthodontics</span><span>Legal Services</span><span>Coaching &amp; Consulting</span><span>Auto Dealerships</span><span>Gyms &amp; Fitness</span><span>Restaurants &amp; F&amp;B</span><span>Solar &amp; Energy</span><span>Insurance</span><span>E-Commerce</span><span>Financial Services</span><span>Landscaping</span>
+  </div>
+</div>
+
+<!-- ====== ABOUT ====== -->
+<section class="block reveal" id="about">
+  <div class="two-col">
+    <div>
+      <div class="eyebrow">Who We Are</div>
+      <h2>Performance Ads.<br><span class="gold">Real Results.</span><br>Zero Guesswork.</h2>
+      <p style="font-size:16px;color:var(--text-m);line-height:1.7;">We don't sell vanity metrics. We sell pipeline. Our team of paid-media specialists, creative strategists, and AI engineers work together to deliver exclusive, verified leads directly into your CRM — never shared with 10 other businesses.</p>
+      <ul class="checks">
+        <li>Exclusive leads — never shared with competitors</li>
+        <li>No long-term contracts. Cancel anytime.</li>
+        <li>Dedicated growth specialist in your time zone</li>
+        <li>AI-powered qualification before leads reach you</li>
+      </ul>
+    </div>
+    <div class="about-features">
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <h4>Hyper-Targeted</h4>
+        <p>Precision campaigns built for your exact service area and ideal client profile.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h4>Full Transparency</h4>
+        <p>Live dashboards and weekly reports. You always know where your money is going.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🤖</div>
+        <h4>AI Qualified</h4>
+        <p>Our AI engagement layer pre-qualifies every lead before it hits your inbox.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h4>Speed to Lead</h4>
+        <p>Average response time under 60 seconds — when prospects are still hot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PROCESS ====== -->
+<section class="block reveal center" id="process">
+  <div class="eyebrow">How It Works</div>
+  <h2>Our 3-Step <span class="gold">Process</span></h2>
+  <p class="section-sub">From your free 5-minute audit to a flood of inbound leads in under two weeks. Simple, proven, repeatable.</p>
+  <div class="process" style="text-align:left;">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-icon">🔍</div>
+      <div class="step-tag">Step One</div>
+      <h3>Free Audit</h3>
+      <p>Take our 5-minute audit. We map your business, your market, your ideal client, and exactly where you're leaking revenue right now. No card required, no sales call.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-icon">🚀</div>
+      <div class="step-tag">Step Two</div>
+      <h3>Launch Campaign</h3>
+      <p>We build and launch precision-targeted campaigns across Facebook, Instagram, TikTok, and Google — designed to stop the scroll and convert viewers into booked appointments.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-icon">💰</div>
+      <div class="step-tag">Step Three</div>
+      <h3>Generate Pipeline</h3>
+      <p>Pre-qualified prospects land in your inbox or CRM. We filter out tire-kickers so every lead is genuinely interested and ready to hear your quote — no shared lists.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== NICHES ====== -->
+<section class="block reveal center" id="niches">
+  <div class="eyebrow">Industries We Serve</div>
+  <h2>Every Niche.<br><span class="gold">Every Market.</span></h2>
+  <p class="section-sub">Whether you're a solo contractor or a multi-location operator, we have a playbook built for your industry.</p>
+  <div class="niche-grid" style="text-align:left;">
+    <div class="niche"><div class="niche-icon">🏠</div><h4>Home Improvement</h4><p>Roofing · Windows · Siding</p></div>
+    <div class="niche"><div class="niche-icon">🔧</div><h4>HVAC &amp; Plumbing</h4><p>Installation · Repair · Emergency</p></div>
+    <div class="niche"><div class="niche-icon">🏡</div><h4>Real Estate</h4><p>Buyers · Sellers · Agents</p></div>
+    <div class="niche"><div class="niche-icon">💆</div><h4>Med Spas &amp; Aesthetics</h4><p>Botox · Fillers · Laser</p></div>
+    <div class="niche"><div class="niche-icon">🦷</div><h4>Dental &amp; Orthodontics</h4><p>Implants · Invisalign · Whitening</p></div>
+    <div class="niche"><div class="niche-icon">⚖️</div><h4>Legal Services</h4><p>Personal Injury · Family · Criminal</p></div>
+    <div class="niche"><div class="niche-icon">☀️</div><h4>Solar &amp; Energy</h4><p>Residential · Commercial</p></div>
+    <div class="niche"><div class="niche-icon">🏋️</div><h4>Gyms &amp; Fitness</h4><p>Memberships · Personal Training</p></div>
+    <div class="niche"><div class="niche-icon">🚗</div><h4>Auto Dealerships</h4><p>New · Used · Service</p></div>
+    <div class="niche"><div class="niche-icon">🍽️</div><h4>Restaurants &amp; F&amp;B</h4><p>Reservations · Delivery · Events</p></div>
+    <div class="niche"><div class="niche-icon">🎓</div><h4>Coaching &amp; Consulting</h4><p>Business · Life · Executive</p></div>
+    <div class="niche"><div class="niche-icon">🌿</div><h4>Landscaping</h4><p>Design · Maintenance · Irrigation</p></div>
+  </div>
+</section>
+
+<!-- ====== BIG CTA ====== -->
+<section class="block">
+  <div class="big-cta reveal">
+    <div class="big-cta-content">
+      <div class="eyebrow">Ready to Scale?</div>
+      <h2>GET YOUR<br><span class="gold">FREE 5-MIN</span><br>AUDIT</h2>
+      <p class="section-sub">Tell us about your business in 5 minutes and we'll show you exactly where the money is leaking and how to plug it. Zero card. Zero pitch. Zero obligation.</p>
+      <a href="https://app.mplannerpro.com/abce1ffefc/chat?pg=69539a14a3" class="btn-primary" style="font-size:17px;padding:22px 40px;">⚡ Start My Free Audit →</a>
+      <div class="guarantee">🛡️ No card. No call required. No spam. Just clarity.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== WHY US ====== -->
+<section class="block reveal center">
+  <div class="eyebrow">Why Choose Us</div>
+  <h2>Built On Results,<br><span class="gold">Not Promises.</span></h2>
+  <div class="why-grid" style="text-align:left;">
+    <div class="why">
+      <div class="why-icon">🏆</div>
+      <h4>Industry Specialists</h4>
+      <p>Our strategists have deep expertise in your niche. We speak your industry's language and know exactly what converts your specific audience into paying clients.</p>
+    </div>
+    <div class="why">
+      <div class="why-icon">✅</div>
+      <h4>Performance-Locked</h4>
+      <p>We back every engagement with measurable benchmarks. If we don't hit pipeline goals in 30 days, we don't get paid. That's how confident we are in the system.</p>
+    </div>
+    <div class="why">
+      <div class="why-icon">🎯</div>
+      <h4>Pre-Qualified Only</h4>
+      <p>No shared lists. No tire-kickers. Every lead is filtered through our AI engagement layer to ensure they're ready to buy — not just browse.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TESTIMONIALS ====== -->
+<section class="block reveal center" id="results">
+  <div class="eyebrow">Client Results</div>
+  <h2>Real Owners.<br><span class="gold">Real Revenue.</span></h2>
+  <p class="section-sub">Don't take our word for it. Here's what business owners across the country are saying.</p>
+  <div class="test-grid" style="text-align:left;">
+    <div class="test">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"In the first 3 weeks, we closed 4 roofing jobs directly from Ownly leads. That's $48K in new revenue. The ROI speaks for itself."</p>
+      <div class="test-author"><div class="test-avatar">MR</div><div><div class="test-name">Marcus R.</div><div class="test-co">Elite Roofing Co. · Houston, TX</div></div></div>
+    </div>
+    <div class="test">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"I was skeptical at first but they delivered 17 qualified leads in month one. My dental practice is booked out 6 weeks ahead now. Worth every penny."</p>
+      <div class="test-author"><div class="test-avatar">SC</div><div><div class="test-name">Dr. Sarah C.</div><div class="test-co">Smile Studio Dental · Sarasota, FL</div></div></div>
+    </div>
+    <div class="test">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"We scaled from $30K/month to $110K/month in 4 months. The ads they run for our HVAC business are the best marketing investment we've made."</p>
+      <div class="test-author"><div class="test-avatar">TL</div><div><div class="test-name">Tyler L.</div><div class="test-co">ProTemp HVAC · Phoenix, AZ</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FINAL CTA STRIPE ====== -->
+<section class="block center" style="padding-top:0;padding-bottom:100px;">
+  <h2>Stop Guessing. <span class="gold">Start Scaling.</span></h2>
+  <p class="section-sub" style="margin-bottom:40px;">Your free 5-minute audit is one click away.</p>
+  <a href="https://app.mplannerpro.com/abce1ffefc/chat?pg=69539a14a3" class="btn-primary" style="font-size:17px;padding:22px 40px;">⚡ Take the Free Audit →</a>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <a href="#top" class="logo">OWNLY <b>MARKETING</b></a>
+  <p class="foot-tag">Your Growth. Our Engine.</p>
+  <div class="foot-links">
+    <a href="#about">About</a>
+    <a href="#process">Process</a>
+    <a href="#niches">Niches</a>
+    <a href="#results">Results</a>
+    <a href="https://app.mplannerpro.com/abce1ffefc/chat?pg=69539a14a3">Free Audit</a>
+  </div>
+  <div class="foot-contact">
+    <a href="mailto:david@ownly1nce.com">david@ownly1nce.com</a> &nbsp;·&nbsp; 941-277-9876 &nbsp;·&nbsp; <a href="https://itsownlymoney.com">itsownlymoney.com</a>
+  </div>
+  <div class="foot-bottom">
+    © 2026 Ownly ONCE. All Rights Reserved. · Serving the United States · Performance-driven marketing for business owners.
+  </div>
+</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1});
+reveals.forEach(r=>obs.observe(r));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}));
+</script>
+</body>
+</html>
